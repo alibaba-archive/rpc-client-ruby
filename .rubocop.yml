@@ -1,0 +1,48 @@
+Metrics/ClassLength:
+  Enabled: false
+
+Metrics/MethodLength:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 120
+
+Naming/UncommunicativeMethodParamName:
+  Description: >-
+                Checks for method parameter names that contain capital letters,
+                end in numbers, or do not meet a minimal length.
+  Enabled: true
+  VersionAdded: '0.53'
+  VersionChanged: '0.59'
+  # Parameter names may be equal to or greater than this value
+  MinNameLength: 3
+  AllowNamesEndingInNumbers: true
+  # Whitelisted names that will not register an offense
+  AllowedNames:
+    - io
+    - id
+    - to
+    - by
+    - 'on'
+    - in
+    - at
+    - ip
+    - db
+    - t
+  # Blacklisted names that will register an offense
+  ForbiddenNames: []
+
+Metrics/BlockLength:
+  Description: 'Avoid long blocks with many lines.'
+  Enabled: true
+  VersionAdded: '0.44'
+  VersionChanged: '0.66'
+  CountComments: false  # count full line comments?
+  Max: 25
+  ExcludedMethods:
+    # By default, exclude the `#refine` method, as it tends to have larger
+    # associated blocks.
+    - refine
+    - describe
+  Exclude:
+    - '**/*.gemspec'
