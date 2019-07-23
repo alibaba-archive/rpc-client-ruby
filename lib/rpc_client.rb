@@ -7,7 +7,7 @@ require 'json'
 
 # The AliyunSDK module
 module AliyunSDK
-  VERSION = '0.0.1'
+  VERSION = '0.0.2'
 
   def replace_repeat_list(target, key, repeat)
     repeat.each_with_index do |item, index|
