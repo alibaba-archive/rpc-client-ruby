@@ -61,7 +61,7 @@ module AliyunSDK
       self.__version = config[:apiVersion]
       self.credential = config[:credential]
       self.__endpoint = config[:endpoint]
-      self.__regionId = config[:regionId]
+      self.__region_id = config[:regionId]
       self.codes = Set.new [200, '200', 'OK', 'Success']
       codes.merge config[:codes] if config[:codes]
     end
@@ -75,11 +75,11 @@ module AliyunSDK
     end
 
     def __get_access_key_id
-      __accessKeyId
+      __access_key_id
     end
 
     def __get_access_key_secret
-      __accessKeySecret
+      __access_key_secret
     end
 
     def __get_endpoint(product, region_id)
