@@ -1,5 +1,15 @@
-RPC Client for Ruby
-===================
+<p align="center">
+<a href="https://www.alibabacloud.com"><img src="https://aliyunsdk-pages.alicdn.com/icons/AlibabaCloud.svg"></a>
+</p>
+
+<h1 align="center">RPC Client for Ruby</h1>
+
+<p align="center">
+<a href="https://badge.fury.io/rb/rpc_client"><img src="https://badge.fury.io/rb/rpc_client.svg" alt="Gem Version"></a>
+<a href="https://travis-ci.org/aliyun/ruby-rpc-client"><img src="https://travis-ci.org/aliyun/ruby-rpc-client.svg?branch=master" alt="Build Status"></a>
+<a href="https://ci.appveyor.com/project/aliyun/ruby-rpc-client/branch/master"><img src="https://ci.appveyor.com/api/projects/status/m9ajph663tjyq1wk/branch/master?svg=true" alt="Build status"></a>
+<a href="https://codecov.io/gh/aliyun/ruby-rpc-client"><img src="https://codecov.io/gh/aliyun/ruby-rpc-client/branch/master/graph/badge.svg" alt="codecov"></a>
+</p>
 
 This is a Client that used by Alibaba Cloud RPC OpenAPI.
 
