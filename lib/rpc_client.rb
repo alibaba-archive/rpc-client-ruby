@@ -52,7 +52,7 @@ module AliyunSDK
 
   # The RPCClient class
   class RPCClient
-    attr_accessor :__access_key_id, :__access_key_secret, :__region_id,
+    attr_accessor :__access_key_id, :__access_key_secret, :__region_id, :__protocol,
                   :__endpoint, :__version, :credential, :codes
 
     def initialize(config)
