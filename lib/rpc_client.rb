@@ -62,6 +62,7 @@ module AliyunSDK
       self.credential = config[:credential]
       self.__endpoint = config[:endpoint]
       self.__region_id = config[:regionId]
+      self.__protocol = config[:protocol]
       self.codes = Set.new [200, '200', 'OK', 'Success']
       codes.merge config[:codes] if config[:codes]
     end
