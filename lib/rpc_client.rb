@@ -107,7 +107,7 @@ module AliyunSDK
       target = {}
       query.each do |key, value|
         if value.instance_of?(Array)
-          replace_repeat_list(target, key, value)
+          AliyunSDK.replace_repeat_list(target, key, value)
         else
           target[key] = value.to_s
         end
@@ -124,7 +124,7 @@ module AliyunSDK
     end
 
     def __get_signature(request, access_key_secret)
-      method = (request[:method] || 'GET').upcase
+      method = (request['method'] || 'GET').upcase
       normalized = AliyunSDK.normalize(request['query'])
       canonicalized = AliyunSDK.canonicalize(normalized)
       string2sign = "#{method}&#{AliyunSDK.encode('/')}&#{AliyunSDK.encode(canonicalized)}"
