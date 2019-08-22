@@ -9,7 +9,7 @@ require 'json'
 module AliyunSDK
   VERSION = '0.0.3'
 
-  def replace_repeat_list(target, key, repeat)
+  def self.replace_repeat_list(target, key, repeat)
     repeat.each_with_index do |item, index|
       if item&.instance_of?(Hash)
         item.each_key do |k|
