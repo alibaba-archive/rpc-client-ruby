@@ -144,54 +144,53 @@ describe 'RPC client' do
 
   it '__json should ok' do
     client = AliyunSDK::RPCClient.new({})
-    stub_request(:any, "www.example.com").
-      to_return(
-        body: "{}",
+    stub_request(:any, 'www.example.com')
+      .to_return(
+        body: '{}',
         status: 200,
         headers: { 'Content-Length' => 3 }
       )
 
-    response = Net::HTTP.get_response("www.example.com", '/')
+    response = Net::HTTP.get_response('www.example.com', '/')
     r = client.__json(response)
     expect(r).to eql({})
   end
 
   it '__is5xx should ok' do
     client = AliyunSDK::RPCClient.new({})
-    stub_request(:any, "www.example.com").
-      to_return(
-        body: "{}",
+    stub_request(:any, 'www.example.com')
+      .to_return(
+        body: '{}',
         status: 200,
         headers: { 'Content-Length' => 3 }
       )
 
-    response = Net::HTTP.get_response("www.example.com", '/')
+    response = Net::HTTP.get_response('www.example.com', '/')
     r = client.__is5xx(response)
     expect(r).to eq(false)
 
-    stub_request(:any, "www.example.com").
-      to_return(
-        body: "{}",
+    stub_request(:any, 'www.example.com')
+      .to_return(
+        body: '{}',
         status: 500,
         headers: { 'Content-Length' => 3 }
       )
 
-    response = Net::HTTP.get_response("www.example.com", '/')
+    response = Net::HTTP.get_response('www.example.com', '/')
     r = client.__is5xx(response)
     expect(r).to eq(true)
   end
 
   it '__has_error should ok' do
     client = AliyunSDK::RPCClient.new({})
-    r = client.__has_error({
+    r = client.__has_error(
       'Code' => '200'
-    })
+    )
     expect(r).to eq(false)
 
-    r = client.__has_error({
+    r = client.__has_error(
       'Code' => '500'
-    })
+    )
     expect(r).to eq(true)
   end
-
 end

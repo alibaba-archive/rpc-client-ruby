@@ -15,7 +15,7 @@ Gem::Specification.new do |s|
   s.homepage           = 'http://www.alibabacloud.com/'
   s.summary            = 'RPC Core SDK for Ruby'
   s.rubyforge_project  = 'rpc_client'
-  s.license            = 'MIT'
+  s.license            = 'Apache-2.0'
   s.files              = `git ls-files -z lib`.split("\0")
   s.files += %w[README.md]
   s.test_files         = `git ls-files -z spec`.split("\0")
@@ -25,4 +25,8 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'rspec', '~> 3.8', '>= 3.8.0'
   s.add_development_dependency 'simplecov', '~> 0.16', '>= 0.16.1'
   s.add_development_dependency 'webmock', '~> 3.6.2', '>= 3.6.2'
+
+  s.metadata = {
+    'source_code_uri' => 'https://github.com/aliyun/rpc-client-ruby'
+  }
 end
